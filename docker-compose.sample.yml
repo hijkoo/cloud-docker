@@ -1,0 +1,77 @@
+version: "3"
+services:
+  php:
+    image: eventmosh/php7.4.19:v1.0.5
+    # build:
+    #   context: ./services/php
+    #   args:
+    #     PHP_VERSION: php:${PHP_VERSION}-fpm-alpine
+    #     CONTAINER_PACKAGE_URL: ${CONTAINER_PACKAGE_URL}
+    #     PHP_EXTENSIONS: ${PHP_EXTENSIONS}
+    #     TZ: "$TZ"
+    container_name: php
+    volumes:
+      - ${SOURCE_DIR}:/www/:rw
+      - ${PHP_PHP_CONF_FILE}:/usr/local/etc/php/php.ini:ro
+      - ${PHP_FPM_CONF_FILE}:/usr/local/etc/php-fpm.d/www.conf:rw
+      - ${PHP_LOG_DIR}:/var/log/php
+      - ${DATA_DIR}/composer:/tmp/composer
+      - ${SUPERVISOR_LOG}:/var/log/supervisor/:rw
+      - ${SUPERVISOR_CONFIG}:/etc/supervisor/conf.d/:rw
+      - ${SUPERVISOR_CONF_FILE}:/etc/supervisor/supervisord.conf:ro
+      - ${SSH_KEY_DIR}:/root/.ssh:rw
+    restart: always
+    ports:
+      - "9800:9800"
+      - "9805:9805"
+      - "9810:9810"
+      - "9815:9815"
+      - "9830:9830"
+      - "9835:9835"
+      - "9838:9838"
+      - "9840:9840"
+      - "9845:9845"
+      - "9850:9850"
+      - "9855:9855"
+    cap_add:
+      - SYS_PTRACE
+    extra_hosts:
+      - "kafka.connnect.evente-in.cn:123.56.11.28"
+      - "mysql-write.connnect.evente-in.cn:123.56.11.28"
+      - "mysql-read.connnect.evente-in.cn:123.56.11.28"
+      - "redis.connnect.evente-in.cn:123.56.11.28"
+      - "etcd.connnect.evente-in.cn:123.56.11.28"
+      - "common.rpc.evente-in.cn:123.56.11.28"
+      - "travel.rpc.evente-in.cn:123.56.11.28"
+      - "connect.rpc.evente-in.cn:123.56.11.28"
+    networks:
+      - default
+    command: 
+      - /bin/sh
+      - -c 
+      - |
+        crond
+        php-fpm & 
+        supervisord -n -c /etc/supervisor/supervisord.conf
+
+  node:
+    image: eventmosh/node16.4.2:v1.0.0
+    # build:
+    #   context: ./services/node15
+    #   args:
+    #     NODE15_VERSION: node:${NODE15_VERSION}-alpine
+    #     CONTAINER_PACKAGE_URL: ${CONTAINER_PACKAGE_URL}
+    #     TZ: "$TZ"
+    container_name: node
+    volumes:
+      - ${SOURCE_DIR}:/www/:cached
+    restart: always
+    ports:
+      - "3000:3000"
+    stdin_open: true
+    tty: true
+    networks:
+      - default
+        
+networks:
+  default:

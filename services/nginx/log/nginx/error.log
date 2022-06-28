@@ -1,0 +1,243 @@
+2022/06/28 11:51:38 [notice] 1#1: using the "epoll" event method
+2022/06/28 11:51:38 [notice] 1#1: nginx/1.23.0
+2022/06/28 11:51:38 [notice] 1#1: built by gcc 10.2.1 20210110 (Debian 10.2.1-6) 
+2022/06/28 11:51:38 [notice] 1#1: OS: Linux 5.10.25-linuxkit
+2022/06/28 11:51:38 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/06/28 11:51:38 [notice] 1#1: start worker processes
+2022/06/28 11:51:38 [notice] 1#1: start worker process 31
+2022/06/28 11:51:38 [notice] 1#1: start worker process 32
+2022/06/28 11:51:38 [notice] 1#1: start worker process 33
+2022/06/28 11:51:38 [notice] 1#1: start worker process 34
+2022/06/28 11:51:55 [error] 31#31: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.5:9001", host: "localhost"
+2022/06/28 11:51:55 [error] 31#31: *1 open() "/usr/share/nginx/html/50x.html" failed (2: No such file or directory), client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.5:9001", host: "localhost"
+2022/06/28 11:51:57 [error] 31#31: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.5:9001", host: "localhost"
+2022/06/28 11:51:57 [error] 31#31: *1 open() "/usr/share/nginx/html/50x.html" failed (2: No such file or directory), client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.5:9001", host: "localhost"
+2022/06/28 11:51:57 [error] 31#31: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.5:9001", host: "localhost"
+2022/06/28 11:51:57 [error] 31#31: *1 open() "/usr/share/nginx/html/50x.html" failed (2: No such file or directory), client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.5:9001", host: "localhost"
+2022/06/28 11:51:58 [error] 31#31: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.5:9001", host: "localhost"
+2022/06/28 11:51:58 [error] 31#31: *1 open() "/usr/share/nginx/html/50x.html" failed (2: No such file or directory), client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.5:9001", host: "localhost"
+2022/06/28 11:51:58 [error] 31#31: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.5:9001", host: "localhost"
+2022/06/28 11:51:58 [error] 31#31: *1 open() "/usr/share/nginx/html/50x.html" failed (2: No such file or directory), client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.5:9001", host: "localhost"
+2022/06/28 11:51:58 [error] 31#31: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.5:9001", host: "localhost"
+2022/06/28 11:51:58 [error] 31#31: *1 open() "/usr/share/nginx/html/50x.html" failed (2: No such file or directory), client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.5:9001", host: "localhost"
+2022/06/28 11:51:59 [error] 31#31: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.5:9001", host: "localhost"
+2022/06/28 11:51:59 [error] 31#31: *1 open() "/usr/share/nginx/html/50x.html" failed (2: No such file or directory), client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.5:9001", host: "localhost"
+2022/06/28 11:52:00 [error] 31#31: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.5:9001", host: "localhost"
+2022/06/28 11:52:00 [error] 31#31: *1 open() "/usr/share/nginx/html/50x.html" failed (2: No such file or directory), client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.5:9001", host: "localhost"
+2022/06/28 11:52:37 [warn] 34#34: *12 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000001, client: 172.18.0.1, server: localhost, request: "POST /api/common/video/upload HTTP/1.1", host: "localhost:80"
+2022/06/28 11:52:37 [error] 34#34: *12 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: localhost, request: "POST /api/common/video/upload HTTP/1.1", upstream: "fastcgi://172.18.0.5:9001", host: "localhost:80"
+2022/06/28 11:52:37 [error] 34#34: *12 open() "/usr/share/nginx/html/50x.html" failed (2: No such file or directory), client: 172.18.0.1, server: localhost, request: "POST /api/common/video/upload HTTP/1.1", upstream: "fastcgi://172.18.0.5:9001", host: "localhost:80"
+2022/06/28 11:53:17 [error] 31#31: *14 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.5:9001", host: "localhost"
+2022/06/28 11:53:17 [error] 31#31: *14 open() "/usr/share/nginx/html/50x.html" failed (2: No such file or directory), client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.5:9001", host: "localhost"
+2022/06/28 11:53:18 [error] 31#31: *14 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.5:9001", host: "localhost"
+2022/06/28 11:53:18 [error] 31#31: *14 open() "/usr/share/nginx/html/50x.html" failed (2: No such file or directory), client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.5:9001", host: "localhost"
+2022/06/28 11:53:20 [error] 31#31: *14 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.5:9001", host: "localhost"
+2022/06/28 11:53:20 [error] 31#31: *14 open() "/usr/share/nginx/html/50x.html" failed (2: No such file or directory), client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.5:9001", host: "localhost"
+2022/06/28 11:53:25 [error] 31#31: *14 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.5:9001", host: "localhost"
+2022/06/28 11:53:25 [error] 31#31: *14 open() "/usr/share/nginx/html/50x.html" failed (2: No such file or directory), client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.5:9001", host: "localhost"
+2022/06/28 11:53:29 [warn] 34#34: *12 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000002, client: 172.18.0.1, server: localhost, request: "POST /api/common/video/upload HTTP/1.1", host: "localhost:80"
+2022/06/28 11:53:29 [error] 34#34: *12 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: localhost, request: "POST /api/common/video/upload HTTP/1.1", upstream: "fastcgi://172.18.0.5:9001", host: "localhost:80"
+2022/06/28 11:53:29 [error] 34#34: *12 open() "/usr/share/nginx/html/50x.html" failed (2: No such file or directory), client: 172.18.0.1, server: localhost, request: "POST /api/common/video/upload HTTP/1.1", upstream: "fastcgi://172.18.0.5:9001", host: "localhost:80"
+2022/06/28 12:40:02 [warn] 32#32: *22 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000003, client: 172.18.0.1, server: localhost, request: "POST /api/common/video/upload HTTP/1.1", host: "localhost:80"
+2022/06/28 12:40:21 [error] 32#32: *22 connect() failed (113: No route to host) while connecting to upstream, client: 172.18.0.1, server: localhost, request: "POST /api/common/video/upload HTTP/1.1", upstream: "fastcgi://172.18.0.5:9001", host: "localhost:80"
+2022/06/28 12:40:21 [error] 32#32: *22 open() "/usr/share/nginx/html/50x.html" failed (2: No such file or directory), client: 172.18.0.1, server: localhost, request: "POST /api/common/video/upload HTTP/1.1", upstream: "fastcgi://172.18.0.5:9001", host: "localhost:80"
+2022/06/28 12:40:43 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2022/06/28 12:40:43 [notice] 32#32: gracefully shutting down
+2022/06/28 12:40:43 [notice] 33#33: gracefully shutting down
+2022/06/28 12:40:43 [notice] 33#33: exiting
+2022/06/28 12:40:43 [notice] 31#31: gracefully shutting down
+2022/06/28 12:40:43 [notice] 34#34: gracefully shutting down
+2022/06/28 12:40:43 [notice] 32#32: exiting
+2022/06/28 12:40:43 [notice] 33#33: exit
+2022/06/28 12:40:43 [notice] 31#31: exiting
+2022/06/28 12:40:43 [notice] 34#34: exiting
+2022/06/28 12:40:43 [notice] 34#34: exit
+2022/06/28 12:40:43 [notice] 32#32: exit
+2022/06/28 12:40:43 [notice] 31#31: exit
+2022/06/28 12:40:43 [notice] 1#1: signal 17 (SIGCHLD) received from 33
+2022/06/28 12:40:43 [notice] 1#1: worker process 33 exited with code 0
+2022/06/28 12:40:43 [notice] 1#1: signal 29 (SIGIO) received
+2022/06/28 12:40:43 [notice] 1#1: signal 17 (SIGCHLD) received from 32
+2022/06/28 12:40:43 [notice] 1#1: worker process 32 exited with code 0
+2022/06/28 12:40:43 [notice] 1#1: signal 29 (SIGIO) received
+2022/06/28 12:40:43 [notice] 1#1: signal 17 (SIGCHLD) received from 34
+2022/06/28 12:40:43 [notice] 1#1: worker process 34 exited with code 0
+2022/06/28 12:40:43 [notice] 1#1: signal 29 (SIGIO) received
+2022/06/28 12:40:43 [notice] 1#1: signal 17 (SIGCHLD) received from 31
+2022/06/28 12:40:43 [notice] 1#1: worker process 31 exited with code 0
+2022/06/28 12:40:43 [notice] 1#1: exit
+2022/06/28 12:40:47 [notice] 1#1: using the "epoll" event method
+2022/06/28 12:40:47 [notice] 1#1: nginx/1.23.0
+2022/06/28 12:40:47 [notice] 1#1: built by gcc 10.2.1 20210110 (Debian 10.2.1-6) 
+2022/06/28 12:40:47 [notice] 1#1: OS: Linux 5.10.25-linuxkit
+2022/06/28 12:40:47 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/06/28 12:40:47 [notice] 1#1: start worker processes
+2022/06/28 12:40:47 [notice] 1#1: start worker process 31
+2022/06/28 12:40:47 [notice] 1#1: start worker process 32
+2022/06/28 12:40:47 [notice] 1#1: start worker process 33
+2022/06/28 12:40:47 [notice] 1#1: start worker process 34
+2022/06/28 12:40:50 [warn] 32#32: *2 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000001, client: 172.18.0.1, server: localhost, request: "POST /api/common/video/upload HTTP/1.1", host: "localhost:80"
+2022/06/28 13:13:07 [warn] 34#34: *5 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000002, client: 172.18.0.1, server: localhost, request: "POST /api/common/video/upload HTTP/1.1", host: "localhost:80"
+2022/06/28 13:45:02 [error] 31#31: *23 client intended to send too large body: 164566497 bytes, client: 172.18.0.1, server: localhost, request: "POST /api/common/video/upload HTTP/1.1", host: "localhost:80"
+2022/06/28 14:39:30 [error] 31#31: *25 client intended to send too large body: 164566497 bytes, client: 172.18.0.1, server: localhost, request: "POST /api/common/video/upload HTTP/1.1", host: "localhost:80"
+2022/06/28 14:44:11 [error] 31#31: *27 client intended to send too large body: 164566497 bytes, client: 172.18.0.1, server: localhost, request: "POST /api/common/video/upload HTTP/1.1", host: "localhost:80"
+2022/06/28 14:46:47 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2022/06/28 14:46:47 [notice] 31#31: gracefully shutting down
+2022/06/28 14:46:47 [notice] 33#33: gracefully shutting down
+2022/06/28 14:46:47 [notice] 32#32: gracefully shutting down
+2022/06/28 14:46:47 [notice] 34#34: gracefully shutting down
+2022/06/28 14:46:47 [notice] 31#31: exiting
+2022/06/28 14:46:47 [notice] 33#33: exiting
+2022/06/28 14:46:47 [notice] 32#32: exiting
+2022/06/28 14:46:47 [notice] 34#34: exiting
+2022/06/28 14:46:47 [notice] 31#31: exit
+2022/06/28 14:46:47 [notice] 33#33: exit
+2022/06/28 14:46:47 [notice] 32#32: exit
+2022/06/28 14:46:47 [notice] 34#34: exit
+2022/06/28 14:46:47 [notice] 1#1: signal 17 (SIGCHLD) received from 31
+2022/06/28 14:46:47 [notice] 1#1: worker process 31 exited with code 0
+2022/06/28 14:46:47 [notice] 1#1: signal 29 (SIGIO) received
+2022/06/28 14:46:47 [notice] 1#1: signal 17 (SIGCHLD) received from 33
+2022/06/28 14:46:47 [notice] 1#1: worker process 32 exited with code 0
+2022/06/28 14:46:47 [notice] 1#1: worker process 33 exited with code 0
+2022/06/28 14:46:47 [notice] 1#1: signal 29 (SIGIO) received
+2022/06/28 14:46:47 [notice] 1#1: signal 17 (SIGCHLD) received from 34
+2022/06/28 14:46:47 [notice] 1#1: worker process 34 exited with code 0
+2022/06/28 14:46:47 [notice] 1#1: exit
+2022/06/28 14:46:51 [notice] 1#1: using the "epoll" event method
+2022/06/28 14:46:51 [notice] 1#1: nginx/1.23.0
+2022/06/28 14:46:51 [notice] 1#1: built by gcc 10.2.1 20210110 (Debian 10.2.1-6) 
+2022/06/28 14:46:51 [notice] 1#1: OS: Linux 5.10.25-linuxkit
+2022/06/28 14:46:51 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/06/28 14:46:51 [notice] 1#1: start worker processes
+2022/06/28 14:46:51 [notice] 1#1: start worker process 31
+2022/06/28 14:46:51 [notice] 1#1: start worker process 32
+2022/06/28 14:46:51 [notice] 1#1: start worker process 33
+2022/06/28 14:46:51 [notice] 1#1: start worker process 34
+2022/06/28 14:46:56 [warn] 32#32: *2 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000001, client: 172.18.0.1, server: localhost, request: "POST /api/common/video/upload HTTP/1.1", host: "localhost:80"
+2022/06/28 14:47:30 [warn] 32#32: *2 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000002, client: 172.18.0.1, server: localhost, request: "POST /api/common/video/upload HTTP/1.1", host: "localhost:80"
+2022/06/28 14:48:04 [warn] 32#32: *2 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000003, client: 172.18.0.1, server: localhost, request: "POST /api/common/video/upload HTTP/1.1", host: "localhost:80"
+2022/06/28 14:48:39 [warn] 32#32: *2 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000004, client: 172.18.0.1, server: localhost, request: "POST /api/common/video/upload HTTP/1.1", host: "localhost:80"
+2022/06/28 14:49:23 [warn] 32#32: *2 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000005, client: 172.18.0.1, server: localhost, request: "POST /api/common/video/upload HTTP/1.1", host: "localhost:80"
+2022/06/28 14:51:09 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2022/06/28 14:51:09 [notice] 31#31: gracefully shutting down
+2022/06/28 14:51:09 [notice] 33#33: gracefully shutting down
+2022/06/28 14:51:09 [notice] 34#34: gracefully shutting down
+2022/06/28 14:51:09 [notice] 34#34: exiting
+2022/06/28 14:51:09 [notice] 32#32: gracefully shutting down
+2022/06/28 14:51:09 [notice] 31#31: exiting
+2022/06/28 14:51:09 [notice] 33#33: exiting
+2022/06/28 14:51:09 [notice] 34#34: exit
+2022/06/28 14:51:09 [notice] 32#32: exiting
+2022/06/28 14:51:09 [notice] 31#31: exit
+2022/06/28 14:51:09 [notice] 33#33: exit
+2022/06/28 14:51:09 [notice] 32#32: exit
+2022/06/28 14:51:09 [notice] 1#1: signal 17 (SIGCHLD) received from 34
+2022/06/28 14:51:09 [notice] 1#1: worker process 34 exited with code 0
+2022/06/28 14:51:09 [notice] 1#1: signal 29 (SIGIO) received
+2022/06/28 14:51:09 [notice] 1#1: signal 17 (SIGCHLD) received from 33
+2022/06/28 14:51:09 [notice] 1#1: worker process 31 exited with code 0
+2022/06/28 14:51:09 [notice] 1#1: worker process 33 exited with code 0
+2022/06/28 14:51:09 [notice] 1#1: signal 29 (SIGIO) received
+2022/06/28 14:51:09 [notice] 1#1: signal 17 (SIGCHLD) received from 32
+2022/06/28 14:51:09 [notice] 1#1: worker process 32 exited with code 0
+2022/06/28 14:51:09 [notice] 1#1: exit
+2022/06/28 14:51:13 [notice] 1#1: using the "epoll" event method
+2022/06/28 14:51:13 [notice] 1#1: nginx/1.23.0
+2022/06/28 14:51:13 [notice] 1#1: built by gcc 10.2.1 20210110 (Debian 10.2.1-6) 
+2022/06/28 14:51:13 [notice] 1#1: OS: Linux 5.10.25-linuxkit
+2022/06/28 14:51:13 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/06/28 14:51:13 [notice] 1#1: start worker processes
+2022/06/28 14:51:13 [notice] 1#1: start worker process 31
+2022/06/28 14:51:13 [notice] 1#1: start worker process 32
+2022/06/28 14:51:13 [notice] 1#1: start worker process 33
+2022/06/28 14:51:13 [notice] 1#1: start worker process 34
+2022/06/28 14:51:16 [warn] 32#32: *2 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000001, client: 172.18.0.1, server: localhost, request: "POST /api/common/video/upload HTTP/1.1", host: "localhost:80"
+2022/06/28 14:56:09 [warn] 34#34: *5 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000002, client: 172.18.0.1, server: localhost, request: "POST /api/common/video/upload HTTP/1.1", host: "localhost:80"
+2022/06/28 17:52:20 [warn] 31#31: *15 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000003, client: 172.18.0.1, server: localhost, request: "POST /api/common/video/upload HTTP/1.1", host: "localhost:80"
+2022/06/28 17:52:39 [error] 31#31: *15 connect() failed (113: No route to host) while connecting to upstream, client: 172.18.0.1, server: localhost, request: "POST /api/common/video/upload HTTP/1.1", upstream: "fastcgi://172.18.0.4:9000", host: "localhost:80"
+2022/06/28 17:52:39 [error] 31#31: *15 open() "/usr/share/nginx/html/50x.html" failed (2: No such file or directory), client: 172.18.0.1, server: localhost, request: "POST /api/common/video/upload HTTP/1.1", upstream: "fastcgi://172.18.0.4:9000", host: "localhost:80"
+2022/06/28 17:52:48 [warn] 31#31: *15 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000004, client: 172.18.0.1, server: localhost, request: "POST /api/common/video/upload HTTP/1.1", host: "localhost:80"
+2022/06/28 18:52:45 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2022/06/28 18:52:45 [notice] 31#31: gracefully shutting down
+2022/06/28 18:52:45 [notice] 34#34: gracefully shutting down
+2022/06/28 18:52:45 [notice] 32#32: gracefully shutting down
+2022/06/28 18:52:45 [notice] 33#33: gracefully shutting down
+2022/06/28 18:52:45 [notice] 31#31: exiting
+2022/06/28 18:52:45 [notice] 34#34: exiting
+2022/06/28 18:52:45 [notice] 32#32: exiting
+2022/06/28 18:52:45 [notice] 33#33: exiting
+2022/06/28 18:52:45 [notice] 31#31: exit
+2022/06/28 18:52:45 [notice] 34#34: exit
+2022/06/28 18:52:45 [notice] 32#32: exit
+2022/06/28 18:52:45 [notice] 33#33: exit
+2022/06/28 18:52:45 [notice] 1#1: signal 17 (SIGCHLD) received from 34
+2022/06/28 18:52:45 [notice] 1#1: worker process 31 exited with code 0
+2022/06/28 18:52:45 [notice] 1#1: worker process 34 exited with code 0
+2022/06/28 18:52:45 [notice] 1#1: signal 17 (SIGCHLD) received from 33
+2022/06/28 18:52:45 [notice] 1#1: worker process 33 exited with code 0
+2022/06/28 18:52:45 [notice] 1#1: worker process 32 exited with code 0
+2022/06/28 18:52:45 [notice] 1#1: signal 17 (SIGCHLD) received from 32
+2022/06/28 18:52:45 [notice] 1#1: signal 29 (SIGIO) received
+2022/06/28 18:52:45 [notice] 1#1: exit
+2022/06/28 18:53:09 [notice] 1#1: using the "epoll" event method
+2022/06/28 18:53:09 [notice] 1#1: nginx/1.23.0
+2022/06/28 18:53:09 [notice] 1#1: built by gcc 10.2.1 20210110 (Debian 10.2.1-6) 
+2022/06/28 18:53:09 [notice] 1#1: OS: Linux 5.10.25-linuxkit
+2022/06/28 18:53:09 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/06/28 18:53:09 [notice] 1#1: start worker processes
+2022/06/28 18:53:09 [notice] 1#1: start worker process 30
+2022/06/28 18:53:09 [notice] 1#1: start worker process 31
+2022/06/28 18:53:09 [notice] 1#1: start worker process 32
+2022/06/28 18:53:09 [notice] 1#1: start worker process 33
+2022/06/28 18:59:38 [notice] 1#1: using the "epoll" event method
+2022/06/28 18:59:38 [notice] 1#1: nginx/1.23.0
+2022/06/28 18:59:38 [notice] 1#1: built by gcc 10.2.1 20210110 (Debian 10.2.1-6) 
+2022/06/28 18:59:38 [notice] 1#1: OS: Linux 5.10.25-linuxkit
+2022/06/28 18:59:38 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/06/28 18:59:38 [notice] 1#1: start worker processes
+2022/06/28 18:59:38 [notice] 1#1: start worker process 30
+2022/06/28 18:59:38 [notice] 1#1: start worker process 31
+2022/06/28 18:59:38 [notice] 1#1: start worker process 32
+2022/06/28 18:59:38 [notice] 1#1: start worker process 33
+2022/06/28 19:18:29 [notice] 1#1: using the "epoll" event method
+2022/06/28 19:18:29 [notice] 1#1: nginx/1.23.0
+2022/06/28 19:18:29 [notice] 1#1: built by gcc 10.2.1 20210110 (Debian 10.2.1-6) 
+2022/06/28 19:18:29 [notice] 1#1: OS: Linux 5.10.25-linuxkit
+2022/06/28 19:18:29 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/06/28 19:18:29 [notice] 1#1: start worker processes
+2022/06/28 19:18:29 [notice] 1#1: start worker process 32
+2022/06/28 19:18:29 [notice] 1#1: start worker process 33
+2022/06/28 19:18:29 [notice] 1#1: start worker process 34
+2022/06/28 19:18:29 [notice] 1#1: start worker process 35
+2022/06/28 19:34:37 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2022/06/28 19:34:37 [notice] 32#32: gracefully shutting down
+2022/06/28 19:34:37 [notice] 34#34: gracefully shutting down
+2022/06/28 19:34:37 [notice] 33#33: gracefully shutting down
+2022/06/28 19:34:37 [notice] 33#33: exiting
+2022/06/28 19:34:37 [notice] 35#35: gracefully shutting down
+2022/06/28 19:34:37 [notice] 32#32: exiting
+2022/06/28 19:34:37 [notice] 34#34: exiting
+2022/06/28 19:34:37 [notice] 33#33: exit
+2022/06/28 19:34:37 [notice] 35#35: exiting
+2022/06/28 19:34:37 [notice] 32#32: exit
+2022/06/28 19:34:37 [notice] 34#34: exit
+2022/06/28 19:34:37 [notice] 35#35: exit
+2022/06/28 19:34:37 [notice] 1#1: signal 17 (SIGCHLD) received from 33
+2022/06/28 19:34:37 [notice] 1#1: worker process 33 exited with code 0
+2022/06/28 19:34:37 [notice] 1#1: signal 29 (SIGIO) received
+2022/06/28 19:34:37 [notice] 1#1: signal 17 (SIGCHLD) received from 35
+2022/06/28 19:34:37 [notice] 1#1: worker process 34 exited with code 0
+2022/06/28 19:34:37 [notice] 1#1: worker process 32 exited with code 0
+2022/06/28 19:34:37 [notice] 1#1: worker process 35 exited with code 0
+2022/06/28 19:34:37 [notice] 1#1: exit
+2022/06/28 19:34:42 [notice] 1#1: using the "epoll" event method
+2022/06/28 19:34:42 [notice] 1#1: nginx/1.23.0
+2022/06/28 19:34:42 [notice] 1#1: built by gcc 10.2.1 20210110 (Debian 10.2.1-6) 
+2022/06/28 19:34:42 [notice] 1#1: OS: Linux 5.10.25-linuxkit
+2022/06/28 19:34:42 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/06/28 19:34:42 [notice] 1#1: start worker processes
+2022/06/28 19:34:42 [notice] 1#1: start worker process 31
+2022/06/28 19:34:42 [notice] 1#1: start worker process 32
+2022/06/28 19:34:42 [notice] 1#1: start worker process 33
+2022/06/28 19:34:42 [notice] 1#1: start worker process 34
