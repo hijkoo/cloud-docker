@@ -1,14 +1,27 @@
 version: "3"
 services:
+  nginx:
+    #build:
+      # context: ./services/nginx
+    image: registry.cn-hangzhou.aliyuncs.com/hijkoo/cloud-nginx:v1
+    container_name: nginx
+    ports:
+        - "80:80"
+        - "8090:8090"
+    volumes:
+        - ${SOURCE_DIR}:/usr/share/nginx/html:ro
+        - ${NGINX_CONFD_DIR}:/etc/nginx/conf.d/:rw
+        - ${NGINX_CONF_FILE}:/etc/nginx/nginx.conf:ro
+        - ${NGINX_LOG_DIR}:/var/log/nginx/:rw
+    environment:
+        TZ: "$TZ"
+    depends_on:
+        - php
+    restart: always
+    networks:
+       - default
   php:
-    image: eventmosh/php7.4.19:v1.0.5
-    # build:
-    #   context: ./services/php
-    #   args:
-    #     PHP_VERSION: php:${PHP_VERSION}-fpm-alpine
-    #     CONTAINER_PACKAGE_URL: ${CONTAINER_PACKAGE_URL}
-    #     PHP_EXTENSIONS: ${PHP_EXTENSIONS}
-    #     TZ: "$TZ"
+    image: registry.cn-hangzhou.aliyuncs.com/hijkoo/cloud-php:v1
     container_name: php
     volumes:
       - ${SOURCE_DIR}:/www/:rw
@@ -20,49 +33,30 @@ services:
       - ${SUPERVISOR_CONFIG}:/etc/supervisor/conf.d/:rw
       - ${SUPERVISOR_CONF_FILE}:/etc/supervisor/supervisord.conf:ro
       - ${SSH_KEY_DIR}:/root/.ssh:rw
+    environment:
+        TZ: "$TZ"
     restart: always
     ports:
-      - "9800:9800"
-      - "9805:9805"
-      - "9810:9810"
-      - "9815:9815"
-      - "9830:9830"
-      - "9835:9835"
-      - "9838:9838"
-      - "9840:9840"
-      - "9845:9845"
-      - "9850:9850"
-      - "9855:9855"
+      - "9000:9000"
     cap_add:
       - SYS_PTRACE
-    extra_hosts:
-      - "kafka.connnect.evente-in.cn:123.56.11.28"
-      - "mysql-write.connnect.evente-in.cn:123.56.11.28"
-      - "mysql-read.connnect.evente-in.cn:123.56.11.28"
-      - "redis.connnect.evente-in.cn:123.56.11.28"
-      - "etcd.connnect.evente-in.cn:123.56.11.28"
-      - "common.rpc.evente-in.cn:123.56.11.28"
-      - "travel.rpc.evente-in.cn:123.56.11.28"
-      - "connect.rpc.evente-in.cn:123.56.11.28"
-    networks:
-      - default
-    command: 
+    command:
       - /bin/sh
-      - -c 
+      - -c
       - |
         crond
-        php-fpm & 
+        php-fpm &
         supervisord -n -c /etc/supervisor/supervisord.conf
-
-  node:
-    image: eventmosh/node16.4.2:v1.0.0
-    # build:
-    #   context: ./services/node15
-    #   args:
-    #     NODE15_VERSION: node:${NODE15_VERSION}-alpine
-    #     CONTAINER_PACKAGE_URL: ${CONTAINER_PACKAGE_URL}
-    #     TZ: "$TZ"
-    container_name: node
+    networks:
+      - default
+  node15:
+    build:
+      context: ./services/node15
+      args:
+        NODE15_VERSION: node:${NODE15_VERSION}-alpine
+        CONTAINER_PACKAGE_URL: ${CONTAINER_PACKAGE_URL}
+        TZ: "$TZ"
+    container_name: node15
     volumes:
       - ${SOURCE_DIR}:/www/:cached
     restart: always
@@ -72,6 +66,22 @@ services:
     tty: true
     networks:
       - default
-        
+  redis:
+    image: redis
+    restart: always
+    hostname: redis
+    container_name: redis
+    privileged: true
+    ports:
+      - 6379:6379
+    environment:
+      TZ: "$TZ"
+    volumes:
+      - ${REDIS_DATA}:/data
+      - ${REDIS_CONF_FILE}:/etc/redis/redis.conf
+      - ${REDIS_LOG_DIR}:/logs
+    command: ["redis-server","/etc/redis/redis.conf"]
+    networks:
+      - default
 networks:
   default:
