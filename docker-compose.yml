@@ -79,7 +79,7 @@ services:
     volumes:
       - ${REDIS_DATA}:/data/:rw
       - ${REDIS_CONF_FILE}:/etc/redis/redis.conf
-      - ${REDIS_LOG_DIR}:/logs
+      - ${REDIS_LOG_DIR}:/logs/:rw
     command: ["redis-server","/etc/redis/redis.conf"]
     networks:
       - default
