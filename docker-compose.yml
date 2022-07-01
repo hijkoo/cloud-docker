@@ -77,7 +77,7 @@ services:
     environment:
       TZ: "$TZ"
     volumes:
-      - ${REDIS_DATA}:/data
+      - ${REDIS_DATA}:/data/:rw
       - ${REDIS_CONF_FILE}:/etc/redis/redis.conf
       - ${REDIS_LOG_DIR}:/logs
     command: ["redis-server","/etc/redis/redis.conf"]
@@ -90,7 +90,7 @@ services:
     environment:
       TZ: "$TZ"
     volumes:
-      - ${EMQX_ETC}:/opt/emqx/etc
+      - ${EMQX_ETC}:/opt/emqx/etc/:rw
     networks:
     - default
 networks:
