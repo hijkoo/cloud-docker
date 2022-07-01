@@ -18,7 +18,7 @@ RUN yarn config set registry https://registry.npm.taobao.org/ \
 RUN if [ $CONTAINER_PACKAGE_URL ] ; then sed -i "s/dl-cdn.alpinelinux.org/${CONTAINER_PACKAGE_URL}/g" /etc/apk/repositories ; fi
 
 RUN apk --no-cache add tzdata \
-    && cp "/usr/share/zoneinfo/$TZ" /etc/localtime \
+    && ln -sf "/usr/share/zoneinfo/$TZ" /etc/localtime \
     && echo "$TZ" > /etc/timezone
 
 RUN apk add --no-cache bash git openssh gcc g++ autoconf make automake libtool libpng libpng-dev zlib vim nasm

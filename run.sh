@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker-compose up -d php node15
+docker-compose up -d

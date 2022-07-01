@@ -83,5 +83,16 @@ services:
     command: ["redis-server","/etc/redis/redis.conf"]
     networks:
       - default
+  mqtt:
+    image: emqx/emqx:v4.0.0
+    restart: always
+    container_name: mqtt
+    environment:
+      TZ: "$TZ"
+    volumes:
+      - ${EMQX_AUTH_MYSQL_CONF_FILE}:/opt/emqx/etc/plugins/emqx_auth_mysql.conf
+      - ${EMQX_CONF_FILE}:/opt/emqx/etc/emqx.conf
+    networks:
+    - default
 networks:
   default:
