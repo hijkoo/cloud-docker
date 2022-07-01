@@ -91,8 +91,6 @@ services:
       TZ: "$TZ"
     volumes:
       - ${EMQX_ETC}:/opt/emqx/etc
-      #- ${EMQX_AUTH_MYSQL_CONF_FILE}:/opt/emqx/etc/plugins/emqx_auth_mysql.conf
-      #- ${EMQX_CONF_FILE}:/opt/emqx/etc/emqx.conf
     networks:
     - default
 networks:
