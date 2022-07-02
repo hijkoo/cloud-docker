@@ -21,6 +21,8 @@ services:
     networks:
        - default
   php:
+    #build:
+        #context: ./services/php
     image: registry.cn-hangzhou.aliyuncs.com/hijkoo/cloud-php:v1
     container_name: php
     volumes:
@@ -87,6 +89,13 @@ services:
     image: emqx/emqx:v4.0.0
     restart: always
     container_name: mqtt
+    ports:
+      - 1883:1883
+      - 4369:4369
+      - 5369:5369
+      - 6369:6369
+      - 11883:11883
+      - 18083:18083
     environment:
       TZ: "$TZ"
     volumes:
