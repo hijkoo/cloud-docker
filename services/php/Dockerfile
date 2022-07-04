@@ -1,7 +1,7 @@
 FROM php:7.4.19-fpm-alpine
 
 ARG TZ=Asia/Shanghai
-ARG PHP_EXTENSIONS=pdo_mysql,mysqli,mbstring,gd,curl,opcache,mcrypt,redis,bcmath,zip,exif,swoole,xlswriter,rdkafka,imagick
+ARG PHP_EXTENSIONS=pdo_mysql,mysqli,mbstring,gd,curl,opcache,mcrypt,redis,bcmath,zip,exif,swoole,xlswriter,rdkafka,imagick,ext-pcntl
 ARG CONTAINER_PACKAGE_URL=mirrors.aliyun.com
 
 RUN if [ $CONTAINER_PACKAGE_URL ] ; then sed -i "s/dl-cdn.alpinelinux.org/${CONTAINER_PACKAGE_URL}/g" /etc/apk/repositories ; fi
