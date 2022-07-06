@@ -8,6 +8,8 @@ services:
     ports:
         - "80:80"
         - "8090:8090"
+        - "18082:18082"
+        - "1882:1882"
     volumes:
         - ${SOURCE_DIR}:/www/:cached
         - ${SOURCE_DIR}:/usr/share/nginx/html:ro
