@@ -8,7 +8,10 @@ services:
     ports:
         - "80:80"
         - "8090:8090"
+        - "18082:18082"
+        - "1882:1882"
     volumes:
+        - ${SOURCE_DIR}:/www/:cached
         - ${SOURCE_DIR}:/usr/share/nginx/html:ro
         - ${NGINX_CONFD_DIR}:/etc/nginx/conf.d/:rw
         - ${NGINX_CONF_FILE}:/etc/nginx/nginx.conf:ro
@@ -51,23 +54,23 @@ services:
         supervisord -n -c /etc/supervisor/supervisord.conf
     networks:
       - default
-  node15:
-    build:
-      context: ./services/node15
-      args:
-        NODE15_VERSION: node:${NODE15_VERSION}-alpine
-        CONTAINER_PACKAGE_URL: ${CONTAINER_PACKAGE_URL}
-        TZ: "$TZ"
-    container_name: node15
-    volumes:
-      - ${SOURCE_DIR}:/www/:cached
-    restart: always
-    ports:
-      - "3000:3000"
-    stdin_open: true
-    tty: true
-    networks:
-      - default
+  #node15:
+  #  build:
+  #    context: ./services/node15
+  #    args:
+  #      NODE15_VERSION: node:${NODE15_VERSION}-alpine
+  #      CONTAINER_PACKAGE_URL: ${CONTAINER_PACKAGE_URL}
+  #      TZ: "$TZ"
+  #  container_name: node15
+  #  volumes:
+  #    - ${SOURCE_DIR}:/www/:cached
+  #  restart: always
+  #  ports:
+  #    - "3000:3000"
+  #  stdin_open: true
+  #  tty: true
+  #  networks:
+  #    - default
   redis:
     image: redis
     restart: always

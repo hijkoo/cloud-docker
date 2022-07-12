@@ -6,3 +6,6 @@ docker-compose.yml.*
 www/*
 !www/localhost/
 logs/*
+services/nginx/log/*
+services/redis/data/*
+
