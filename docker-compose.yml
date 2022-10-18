@@ -10,6 +10,7 @@ services:
         - "8090:8090"
         - "18082:18082"
         - "1882:1882"
+        - "443:443"
     volumes:
         - ${SOURCE_DIR}:/www/:cached
         - ${SOURCE_DIR}:/usr/share/nginx/html:ro
@@ -94,6 +95,7 @@ services:
     container_name: mqtt
     ports:
       - 1883:1883
+      - 8083:8083
       - 4369:4369
       - 5369:5369
       - 6369:6369
